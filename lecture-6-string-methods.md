@@ -16,20 +16,23 @@ For example, all objects have `toString` and `valueOf` methods.
 
 ```js
 let num = 3;
-num.toString();
+num.toString(); // ret "3"
 
-let bool = true;
+let bool = true; // ret "true"
 bool.toString();
 
-let str = 'hello';
+let str = 'hello'; // ret "hello"
 str.toString();
 
-let arr = [1, 2, 'three'];
+let arr = [1, 2, 'three']; //ret "1, 2, three"
 arr.toString();
 
-let dip = {value: 3};
+let dip = {value: 3};  //ret "object, Object" .... almost useless
 dip.toString();
 ```
+
+
+// variablename.valueOf() will return 
 
 Let's look at the examples above again using `valueOf`.
 
@@ -50,9 +53,9 @@ Strings have a bunch of methods and properties that will be immediately useful. 
 - `.length`
 - `.replace()`
 - `.slice()`
-- `.concat()`
+- `.concat()` //combine
 - `split()`
-- `indexOf()`
+- `indexOf()`  /position in array
 
 📝 None of these methods **mutate** the string; strings are **immutable**.
 📝 They return a new version of the string which you can then work with as you like.
@@ -81,7 +84,9 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.replace('programming','bacon')
 
+//This will only replace the first instance of that which is to be replaced.
 ```
 
 ---
@@ -95,6 +100,7 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.slice(2, 6)
 
 ```
 
@@ -109,6 +115,12 @@ The `.concat()` method is used to join two or more strings.
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
 
+
+partOne.concat(partTwo);
+// same as....
+`${partOne} ${partTwo}`;
+// same as
+const newSentence = partOne + partTwo;
 ```
 
 ---
@@ -120,6 +132,9 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
+truth.split('') //ret an arrawy with many keys, values of every string
+truth.split(' ') //ret an arrawy with every word and no spaces
+truth.split('3') //ret an arrawy with chunks of words that stopped at e, and removes the letter e
 
 ```
 
@@ -134,7 +149,9 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
-
+yodaSpeak.indexOf('Anger') //ret 56
+yodaSpeak.indexOf('Fear') //ret 0
+yodaSpeak.indexOf('fear') //ret -1  i.e. outside the array
 ```
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_
