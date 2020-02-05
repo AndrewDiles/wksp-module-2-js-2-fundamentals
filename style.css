@@ -1,0 +1,749 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+
+
+/* Nav Bar Begins */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px, 10px, 10px, 10px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    z-index: 5;
+}
+
+.nav-mobile a {
+    padding-right: 15px;
+}
+
+.logo {
+    /* left: 10px; */
+    /* padding: 10px; */
+    display: block;
+    max-height: 30px;
+    max-width: 100px;
+}
+
+.mobile-menu-arrow {
+    max-height: 30px;
+    max-width: 100px;
+    right: 0;
+}
+
+.nav-mobile .drop-mobile {
+    margin-top: 7px;
+}
+
+.dropdown-menu {
+    display: none;
+    color: white;
+}
+
+.downlinks {
+    display:none;
+    color: white;
+}
+
+/* issue: the above two both bounce the drop down button left whem display isn't none, which means they are in-line instead of blocks going down */
+
+.drop-mobile {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.drop-mobile:hover > .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;  /* The top and left may be wrong... */
+    left: 0; 
+}
+
+.drop-mobile:hover > .downlinks {
+    display: block;
+    position: absolute;
+    top: 100%;  /* The top and left may be wrong... */
+    left: 0; 
+}
+
+/* .drop-mobile:hover {
+    opacity: .5;
+} */
+
+/* Issue: NOTWORKINGNOTWORKINGNOTWORKINGNOTWORKINGNOTWORKINGNOTWORKING */
+/* Testing above TWO */
+
+.mobile-list {
+    list-style-type: none;
+}
+
+.mobile-list > li {
+    list-style-type: none;
+}
+
+/* .navlinks {
+    display: none;
+} */
+
+.nav-wide {
+    display: none;
+}
+
+.inf:hover {
+    opacity: 0.5;
+}
+
+.games-menu {
+    position: absolute;
+/* display: none; */
+}
+
+
+
+
+/* Nav Bar ends */
+
+
+
+
+
+main {
+    display: grid;
+    /* grid-template-rows: auto 1fr; */
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background-image: url('./assets/BG.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    }
+
+.first-screen {
+    display: block;
+    grid-gap: 0;
+    text-align: left;
+    color: white;
+}
+
+h1 {
+    /* display: block; */
+    padding: 20px;
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+.first-screen p,
+.first-screen h2 {
+    display: block;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 20px;
+    text-align: left;
+    margin: 0;
+}
+
+.pleft,
+.pright {
+    font-size: 1rem;
+}
+
+
+#old {
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+.box1,
+.box2,
+.box3{
+    border: 1px rgb(216, 216, 216) solid;
+    padding: 25px;
+    margin: 25px;
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 1px rgb(216, 216, 216);
+    justify-content: center;
+    /* margin-right: 0px; */
+}
+
+.gotItButton {
+    background-color: black;
+    color:white;
+    font-size: 1rem;
+    padding: 10px 0;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.gotItButton:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.gotItButton a {
+    text-decoration: none;
+    color: white
+}
+
+.gotItButton:active {
+    
+}
+
+.boximg {
+    height: 50px;
+    width: auto;
+}
+
+
+#grow {
+    align-items: start;
+    min-height: 100vh;
+}
+
+.top {
+    position: relative;
+    background-color: rgb(44, 44, 44);
+    min-height: 50vh;
+    text-align: left;
+    padding: 100px;
+}
+
+.top h3 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.top h5 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.top .spinner {
+    position: absolute;
+    height: 200px;
+    width: 60%;
+    /* background-color: rgb(44, 44, 44); */
+    background-image: url('./assets/HKBG.jpg');
+    background-size: cover;
+    background-position: center;
+    left: 20%;
+    bottom: -100px;
+    border: solid 10px white;
+    color: white;
+}
+
+.spinner h4 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.spinner p {
+    padding-top: 130px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) ;
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.spinner:hover {
+    animation: spin 4s ease-in-out;
+}
+
+.bottom {
+    background-image: linear-gradient(to right, #fff, blue);
+    min-height: 50vh;
+    text-align: right;
+    padding: 100px
+}
+.bottom h3 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.bottom h5 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Game images start */
+
+#now {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+}
+
+.imgcells {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    display: grid;
+    /* text-align: center; */
+    justify-content: center;
+    height: 300px;
+    width:auto;
+}
+
+.gamejpg {
+    display: block;
+    width: 100%;
+    opacity: 1.0;
+    /* min-height: 100%; */
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.gamejpg:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.text1 {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    z-index: 0;
+    text-align: center;
+    opacity: 1;
+    font-size: 1.2rem;
+}
+
+.CupHead:hover .text1{
+    z-index: 3;
+    opacity: 1;
+}
+
+/* Issue: Above is not working as intended.  Tried using opacity and z-index
+opcatiy of text retains that of gamejpg.  Would have done this 6x if I had it working.
+*/
+
+/* Game images end */
+
+
+/* Footer begins */
+
+footer {
+    margin: 20px;
+}
+
+.botcols {
+    /* border: grey 1px solid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5%;
+    justify-content: space-evenly;
+}
+
+.botcol{
+    /* border: grey 1px solid; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.botcol a {
+    text-decoration: none;
+    color: black;
+}
+
+.form {
+    padding: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-field {
+    display: block;
+    width: 200px;
+    background-color: white;
+    border: 0;
+    font-size: 1rem;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: grey solid 3px;
+    border-radius: 3px;
+    padding-left: 10px;
+    opacity: .5;
+}
+
+.text-field:hover {
+    opacity: 1;
+    border-color: slategrey;
+}
+input:focus {
+    outline: slategrey;
+}
+textarea:focus {
+    outline: slategrey;
+}
+
+.submission {
+display: flex;
+}
+
+.submit {
+    
+    /* right: 33%; */
+    height: 38px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* position: absolute; */
+
+    /* position: absolute; */
+    /* left: 60%; */
+    /* top: 100px; */
+}
+
+
+
+
+
+
+/* Footer Ends */
+
+/* MEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUMMEDIUM */
+
+@media (min-width: 768px) {
+
+    /* Nav bar begins */
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-wide {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        padding: 10px, 10px, 10px, 10px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        z-index: 5;
+    }
+    
+    .nav-wide a {
+        text-decoration: none;
+        color: white;
+        margin-right: 25px;
+    }
+
+    .nav-wide div a {
+        margin-right: 50px;
+        padding: 0 10px 11px 10px;
+        /* padding-bottom: 10px; */
+    }
+
+    .navlinks:hover {
+        border-bottom: white 3px solid;
+    }
+
+    .games-menu {
+        position: absolute;
+        right: 50px;
+    }
+    .games-list li{
+        text-decoration: none;
+        list-style-type: none;
+        position: relative;
+        top: -3px;
+        right: -50px;
+    text-align: right;
+    background-color: black;
+        display: none;    
+        /*ABOVE LINE REVEALS THE MENU*/
+    }
+
+    /* .gameslist:hover .games-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+    } */
+
+     /* .gameslist:hover {
+        opacity: 0.2;
+    } */
+
+    /* .gameslist:hover .games-list {
+        display: block;
+    } */
+
+    .gameslist:hover ~ .games-menu .games-list li {
+        display: block;
+    }
+    .games-list li:hover {
+        display: block;
+    }
+
+    .games-menu:hover .games-list li {
+        display: block;
+    }
+
+    /* .gameslist:hover .games-menu {
+        display: block;
+    }
+    .gameslist:hover .gameslinks {
+        display: block;
+    }
+    .gameslist:hover .gameslinks {
+        margin-right: 0;
+        display: block;
+    }  */
+
+/* Above blocks are me trying to get the drop down to work.
+Once I got it working I would have done the mobile one's. */
+
+
+/* Issue with drop down */
+
+    .gameslist > li {
+        list-style-type: none;
+    }
+
+
+
+/* Nav Bar Ends */
+
+    .first-screen p,
+    .first-screen h2 {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 30px 0 20px 0;
+        text-align: left;
+        margin: 20px, 20px;
+    }
+
+    .first-screen h2 {
+        margin: 20px;
+    }
+    .first-screen {
+        display:grid;
+        border: 10px white solid;
+        padding: 0;
+        margin: 7%;
+    }
+
+    .bgcoloring {
+        margin: 0;
+        /* padding: 0; */
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    .first-screen-paragraphs {
+        margin: 20px;
+        /* padding: 0; */
+        border-top: 1px dashed white;
+    }
+
+    h1, h2 {
+        font-size: 3rem;
+    }
+
+    /* h2 {
+        padding: 20px;
+        margin: 20px;
+    }  */
+
+/* Issue: Dashed border ends at margin. */
+
+    #old {
+        display: grid;
+        grid-template-areas:
+        'b1'
+        'b2'
+        'b3';
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-areas:
+        'b1 b1 b2 b2 '
+        '. b3 b3 .';
+    }
+
+    .box1 {
+        grid-area: b1;
+    }
+    .box2 {
+        grid-area: b2;
+    }
+    .box3 {
+        grid-area: b3;
+    }
+
+    .top .spinner {
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        /* background-color: rgb(44, 44, 44); */
+        background-image: url('./assets/HKBG.jpg');
+        background-size: cover;
+        background-position: center;
+        left: 50px;
+        bottom: -100px;
+        border: solid 10px white;
+        text-align: center;
+    }
+
+    @keyframes spin {
+        from {
+            left: 50px;
+            transform: scale(1) rotate(0deg) ;
+        }
+    
+        50% {
+            left: 20%;
+            transform: scale(1.2) rotate(180deg) ;
+        }
+    
+        75% {
+            left: 20%;
+            transform: scale(1) rotate(180deg);
+        }
+    
+        to {
+            left: 20%;
+            transform: scale(0) rotate(180deg);
+        }
+    }
+
+
+    #now {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+
+
+
+    .botcols{
+        /* border: grey 1px solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10%;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5%;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+}
+
+/* WIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDEWIDE */
+
+@media (min-width: 1200px) {
+
+/* NAV BAR BEGINS */
+
+
+
+
+
+
+/* NAV BAR ENDS */
+
+    .first-screen {
+        display: grid;
+        grid-template-areas:
+        'leftblock'
+        'topright'
+        'botmid'
+        'botright';
+        grid-template-columns: 666px, auto, auto;
+        grid-template-areas:
+        'leftblock topright topright'
+        'leftblock botmid botright'
+        'leftblock botmid botright';
+        /* min-height: 50%; This seems to mess up more than it is worth*/
+    }
+
+    /* .bgcoloring {
+         min-height: 50%;
+    }  */
+
+    h1 {
+        grid-area: leftblock;
+        font-size: 5rem;
+        padding-top: 30%;
+        /* padding: */
+    }
+
+    h2 {
+        grid-area: topright;
+    }
+
+    .pleft {
+        grid-area: botmid;
+        font-size: 1.2rem;
+        /* padding-right: 10px; over-ruled */
+    }
+
+    .first-screen .pleft {
+        padding-right: 20px;
+    }
+    .pright {
+        grid-area: botright;
+        font-size: 1.2rem;
+        /* padding-left: 10px; over-ruled */
+    }
+
+    .first-screen .pright {
+        padding-left: 70px;
+    }
+
+    .first-screen-paragraphs {
+        display: flex;
+    }
+
+    #old {
+        display: inline-flex;
+    }
+
+    #now {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+
+
+
+}

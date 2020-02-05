@@ -11,11 +11,23 @@
 // function toUpperCase(str) { return str.toUpperCase(); }
 // map(["bob", "susie"], toUpperCase) returns ["BOB", "SUSIE"]
 
-function map(lst, func) {
-    // lst is an array and func is a function
 
+// Andrew: I don't see a question.  Guessing the question is to make a map function.
+
+
+function map(lst, func) {
+    let newlst = [];
+    for (i=0; i<lst.length; i++) {
+        newlst.push(func(lst[i]));
+    }
+    return newlst;
+    
 }
+function charCount(x) {
+    return x.length;
+}
+
 // -------------------------------------------------------------------------
-function charCount(str) { return str.length };
+// function charCount(str) { return str.length };  I wrote my own before seeing this lol
 console.log('Q7: ', map(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'], charCount));
 console.log('Q7: ', map(['Scott', 'Bob', 'Ric', 'Jim'], charCount));
